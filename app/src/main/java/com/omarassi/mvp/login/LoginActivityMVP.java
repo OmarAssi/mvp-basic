@@ -32,6 +32,8 @@ public interface LoginActivityMVP {
 
         void getCurrentUser();
 
+        void saveUser();
+
     }
 
     interface Model {
