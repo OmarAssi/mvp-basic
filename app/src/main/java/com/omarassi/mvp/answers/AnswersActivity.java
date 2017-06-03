@@ -1,7 +1,6 @@
 package com.omarassi.mvp.answers;
 
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,9 +17,6 @@ import com.omarassi.mvp.rest.remote.SOService;
 
 import java.util.ArrayList;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -58,7 +54,6 @@ public class AnswersActivity extends AppCompatActivity {
         loadAnswers();
     }
 
-    @Override
     public void loadAnswers() {
         mService.getAnswers().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<StackAPI>() {
