@@ -1,6 +1,7 @@
 package com.omarassi.mvp.login;
 
 import android.support.annotation.Nullable;
+import com.omarassi.mvp.root.ApplicationModule;
 
 /**
  * Created by omarassi on 02.06.17.
