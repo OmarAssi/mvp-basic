@@ -26,4 +26,10 @@ public class ApplicationModule {
     public Context provideContext(){
         return application;
     }
+
+    @Provides
+    @Singleton
+    public Context getContext(){
+        return application.getApplicationContext();
+    }
 }
